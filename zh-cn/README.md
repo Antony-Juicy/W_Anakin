@@ -1,7 +1,3 @@
-## 在线阅读
-
-- **[国内优先 Gitee 在线阅读](https://mochazi.gitee.io/docsify-demo)** | [Gitee 仓库地址](https://gitee.com/mochazi/docsify-demo)
-
 ## 编写警告
 
 > [!WARNING]

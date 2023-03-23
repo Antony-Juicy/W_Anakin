@@ -4,6 +4,7 @@
 
   - [基础](zh-cn/React/base.md)
   - [Hooks](zh-cn/React/func.md)
+  - [Http](zh-cn/Https/Http.md)
   - [对象](zh-cn/React/object.md)
 
 - vue
