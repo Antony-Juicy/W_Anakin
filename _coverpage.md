@@ -1,13 +1,12 @@
-<img width="160px" style="border-radius: 50%" bor src="style/head_portrait.jpg">
+<img width="160px" style="border-radius: 50%" bor src="style/logo.">
 
-# **docsify-demo**
+# **W_Anakin**
 
-- 本文档是作者折腾 ```docsify```以来的学习历程<br>旨在为大家提供一个较完整的docsify框架结构<br>如果本文能为您得到帮助，请给予支持！
+- <strong>励志做一个优秀的搬运工</strong>
 
-[![stars](https://badgen.net/github/stars/mochazi/docsify-demo?color=4ab8a1)](https://github.com/mochazi/docsify-demo)
-[![forks](https://badgen.net/github/forks/mochazi/docsify-demo?color=4ab8a1)](https://github.com/mochazi/docsify-demo)
+[![stars](https://badgen.net/github/stars/mochazi/docsify-demo?color=4ab8a1)](https://github.com/Antony-Juicy/W_Anakin)
+[![forks](https://badgen.net/github/forks/mochazi/docsify-demo?color=4ab8a1)](https://github.com/Antony-Juicy/W_Anakin)
 ![](https://img.shields.io/badge/%E6%91%B8%E9%B1%BC-%E7%A8%8B%E5%BA%8F%E5%91%98-green)
 
-[GitHub](https://github.com/mochazi/docsify-demo)
-[开始阅读](?id=中文文档)
-
+[GitHub](https://github.com/Antony-Juicy/W_Anakin)
+[开始阅读](?id=在线阅读)
