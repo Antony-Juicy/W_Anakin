@@ -1,12 +1,18 @@
 - 前言
-    - [简介](zh-cn/README.md)
-    
-- C++
-    - [基础](zh-cn/C++/base.md)
-    - [函数](zh-cn/C++/func.md)
-    - [对象](zh-cn/C++/object.md)
+  - [简介](zh-cn/README.md)
+- React
 
-- Python
-    - [基础](zh-cn/Python/base.md)
-    - [函数](zh-cn/Python/func.md)
-    - [对象](zh-cn/Python/object.md)
+  - [基础](zh-cn/React/base.md)
+  - [Hooks](zh-cn/React/func.md)
+  - [对象](zh-cn/React/object.md)
+
+- vue
+
+  - [基础](zh-cn/Vue/base.md)
+  - [函数](zh-cn/Vue/func.md)
+  - [对象](zh-cn/Vue/object.md)
+
+- TypeScript
+  - [安装](zh-cn/TypeScript/install.md)
+  - [基础](zh-cn/TypeScript/base.md)
+  - [函数](zh-cn/TypeScript/func.md)
