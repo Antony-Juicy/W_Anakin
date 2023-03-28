@@ -1,3 +1,38 @@
+## box-sizing:border-box 和 box-sizing；content-box 的区别
+
+border-box：边框和内边距的值是包含在 width 内的。（怪异盒模型）
+区别：
+content-box：padding 和 border 不被包含在定义的 width 和 height 之内。
+
+盒子的实际宽度=设置的 width+padding+border
+
+border-box：padding 和 border 被包含在定义的 width 和 height 之内。
+盒子的实际宽度=设置的 width（padding 和 border 不会影响实际宽度）
+
+## 清除浮动的方式
+
+1.额外标签法（隔墙法）--》在浮动元素末尾添加一个空标签
+
+2.父级添加 overflow 属性
+
+3.父级添加 after 伪元素
+
+4.父级添加双伪元素（万能清除法）
+
+## http 状态码
+
+- 200 - 请求成功
+- 301 - 资源（网页等）被永久转移到其它 URL
+- 404 - 请求的资源（网页等）不存在
+- 500 - 内部服务器错误
+
+| 1\*\* | 信息，服务器收到请求，需要请求者继续执行操作   |
+| ----- | ---------------------------------------------- |
+| 2\*\* | 成功，操作被成功接收并处理                     |
+| 3\*\* | 重定向，需要进一步的操作以完成请求             |
+| 4\*\* | 客户端错误，请求包含语法错误或无法完成请求     |
+| 5\*\* | 服务器错误，服务器在处理请求的过程中发生了错误 |
+
 ## 水平垂直居中的方式有哪些
 
 - position +margin:auto：父容器相对定位，子容器绝对定位，上下左右设置为 0，marginQ 置为 auto
@@ -208,3 +243,60 @@ ES6 **class 继承**
 采用 transform: translate3d(0, 0, 0)
 
 使用 CSS 的 will-change 属性。will-change 可以设置为 opacity、transform、 top、
+
+## 介绍 Flex 布局，Flex 是什么属性的缩写。
+
+- flex 属性是 flex-grow、flex-shrink 和 flex-basis 的简写
+
+## css div 垂直水平居中，并完成 div 高度永远是宽度的一半（宽度可以不指定）
+
+- width 设置百分比
+- padding 撑高
+- 如果只是要相对于 body 而言的话，还可以使用 vw 和 vh
+- 伪元素设置 margin-top: 100%撑高
+
+双重嵌套，外层 relative，内层 absolute
+
+## 实现两栏布局的方式：
+
+- 左 float，然后右 margin-left（右边自适应）
+- 右 float，margin-right
+
+**flex 实现两栏布局**
+position + margin
+左边元素固定宽度，右边的元素设置 flex: 1
+
+- 利用绝对定位，父级元素设为相对定位。左边元素 absolute 定位，宽度固定。右边元素的 margin-left 的值设为左边元素的宽度值，绝对定位后相当于脱离文档流，right 对齐点变为左上角，设置 margin 即可
+
+- 利用绝对定位，父级元素设为相对定位。左边元素宽度固定，右边元素 absolute 定位， left 为宽度大小，其余方向定位为 0
+
+## 三列布局的方式
+
+- position + margin-left + margin-right
+
+## 请你讲一讲 CSS 的权重和优先级
+
+- 从 0 开始，一个行内样式+1000，一个 id 选择器+100，一个属性选择器、class 或者伪类+10，一个元素选择器，或者伪元素+1，通配符+0
+
+**优先级**
+
+- 权重相同，写在后面的覆盖前面的
+  使用 !important 达到最大优先级，都使用 !important 时，权重大的优先级高
+
+## CSS 动画有哪些？
+
+animation、transition、transform、translate 这几个属性要搞清楚：
+
+- animation：用于设置动画属性，他是一个简写的属性，包含 6 个属性
+
+- transition：用于设置元素的样式过度，和 animation 有着类似的效果，但细节上有很大的不同
+
+- transform：用于元素进行旋转、缩放、移动或倾斜，和设置样式的动画并没有什么关系
+
+- translate：translate 只是 transform 的一个属性值，即移动，除此之外还有 scale 等
+
+## rgba()和 opacity 这两个的透明效果有什么区别
+
+- opacity 是属性，rgba()是函数，计算之后是个属性值；
+- opacity 作用于元素和元素的内容，内容会继承元素的透明度，取值 0-1；
+- rgba() 一般作为背景色 background-color 或者颜色 color 的属性值，透明度由其中的 alpha 值生效，取值 0-1；
