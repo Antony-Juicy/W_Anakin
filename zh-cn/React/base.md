@@ -422,15 +422,27 @@ Promise 对象的数组，成功的时候返回一个结果的数组，返回值
 如果遇到需要同时发送多个请求并且按顺序返回结果的话，Promiseall 就可以完美解决这个问题
 
 ```
-MyPromise.all=function(promisesList){	js 复制代码
-let arr = []
-return new MyPromise((resolvereiect)=>{ if(!promisesList.length)resolve([])
-//直接环同时执行传进来的promise
-for (const promise of promisesList){ promise.then((res)=>{// 保存返回结果 arr.push(res)
-if(arr.length===promisesListlength){
-  //执行结束 返回结果集合 resolve(arr)}
-},reject)
-})
+const PromiseAl1 = (promiseArray) => {
+    return new Promise((resolve, reject) => {
+      if (Array.isArray(promiseArray)) {
+        return reject(new Error('传入的参数必须是数组！'));
+      }
+      const res: any[] = [];
+      const promiseNums = promiseArray.length;
+      let counter = 0;
+      for (let i = 0; i < promiseNums; i++) {
+        Promise.resolve(promiseArray[i])
+          .then((value) => {
+            counter++;
+            res[i] = value;
+            if (counter === promiseNums) {
+              resolve(res);
+            }
+          })
+          .catch((e) => reject(e));
+      }
+    });
+  };
 ```
 
 **Promise.race**
