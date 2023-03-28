@@ -553,6 +553,27 @@ type T1 = string[]
 
 ```
 
+## React + TypeScript 怎么设置全局方法 & 全局变量
+
+根目录下心间一个 d.ts 文件 如下：
+
 ```
+export {}; //使用 export {} 使文件成为模块。
+
+declare global {
+  /**
+   * 现在声明进入全局命名空间的类型，或者增加全局命名空间中的现有声明。
+   */
+  interface Employee {
+    id: number;
+    name: string;
+    salary: number;
+  }
+
+  type Person = {
+    name: string;
+    age: number;
+  };
+}
 
 ```
