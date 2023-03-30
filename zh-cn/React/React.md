@@ -63,6 +63,23 @@ props 是外部传入的数据参数，不可变；
 
 **componentWillUnmount** 组件从 DOM 中被移除的时候调用
 
+## Redux 工作流
+
+store 存储数据
+
+state: 数据的状态，触发 view 的改变
+
+action:参数（改变 state 唯一的方式）
+
+reducer(必须是一个纯函数用于 state 修改逻辑):利用 state，action 来返回一个新的
+
+- 常用方法
+  - store.getState() 获取仓库最新状态
+  - store.dispatch(action) 修改数据唯一方式
+  - store.subscribe(fn) 监听数据修改
+    redux 的工作原理
+    state 保持在单一的 store 里面，改变 state 唯一 的方式是触发 actions，然后 action 来编写 reducers 来修改 state
+
 ## React 事件机制
 
 **什么是合成事件**
