@@ -26,5 +26,6 @@
   - [函数](zh-cn/TypeScript/func.md)
 
 - webpack
-- [基础](zh-cn/webpack/webpack.md)
-- [配置](zh-cn/webpack/disposition.md)
+
+  - [基础](zh-cn/webpack/webpack.md)
+  - [配置](zh-cn/webpack/disposition.md)
