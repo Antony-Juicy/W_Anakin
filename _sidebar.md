@@ -10,7 +10,7 @@
   - [Http](zh-cn/Https/Http.md)
   - [GitFlow](zh-cn/React/GitFlow.md)
   - [业务](zh-cn/React/Service.md)
-  - [埋点监控](zh-cn/React/gomo.md)
+  - [埋点监控](zh-cn/React/aogo.md)
   - [性能监控指标](zh-cn/React/optimize.md)
 
 - vue
