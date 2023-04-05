@@ -1,10 +1,10 @@
-# webpack 与 gulp 的区别？
+## webpack 与 gulp 的区别？
 
 答：gulp 是基于任务的构建工具，webpack 是基于配置的构建工具
 
-# chunk 和 bundle 的区别是什么？
+## chunk 和 bundle 的区别是什么？
 
-#### chunk
+## chunk
 
 chunk 是 webpack 打包过程中 Modules 的集合，是「打包过程中」的概念。
 
@@ -14,11 +14,11 @@ Webpack 通过引用关系逐个打包模块，这些 module 就形成一个 chu
 
 如果有多个入口模块，可能会产出多条打包路，每天路径都会形成一个 chunk
 
-#### bundle
+## bundle
 
 是我们最终输出的一个或者多个打包好的文件
 
-#### chunk 和 bundle 的关系是什么？
+## chunk 和 bundle 的关系是什么？
 
 大多数情况下，一个 chunk 会产生一个 bundle ，但也不列外
 
@@ -26,7 +26,7 @@ Webpack 通过引用关系逐个打包模块，这些 module 就形成一个 chu
 
 Chunk 是过程中代码块，Bundle 是打包结果输出的代码块 Chunk 在构建完成就呈现为 Bundle
 
-# webpack 的工作原理？
+## webpack 的工作原理？
 
 1. 初始化参数：shell webpack.config.js
 2. 开始编译：初始化一个 Compiler 对象，加载所有的配置，开始执行编译
@@ -36,29 +36,31 @@ Chunk 是过程中代码块，Bundle 是打包结果输出的代码块 Chunk 在
 6. 输出资源：根据得到依赖关系，组装成一个包含多个 module 的 chunk
 7. 输出完成：根据配置，确定要输出的文件名以及文件路径
 
-# Plugin 和 Loader 分别是做什么的？怎么工作的？
+## Plugin 和 Loader 分别是做什么的？怎么工作的？
 
-#### Loader
+## Loader
 
 模块转换器，将非 js 模块转化为 webpack 能识别的 js 模块
 
 本质上，webpack loader 将所有类型的文件，转换为应用程序的 依赖图 可以直接引用的模块。
 
-#### Plugin
+## Plugin
 
 扩展插件，webpack 运行的各个阶段，都睡广播出对应的事件，插件去监听对应的事件
 
-#### Compiler
+> [!TIP] ![image-20230210200044374](../../loader.jpg)
+
+## Compiler
 
 对象，包含了 webpack 环境的所有配置信息，包含了 options loader ，plugins.webpack 启动的时候实例化，它在全局是唯一的，可以把它理解为 webpack 的实例
 
-#### Compliation
+## Compliation
 
 包含了当前的模块资源，编译生成资源。
 
 webpack 在开发模式下运行的时候，没当检测一个文件变化，就会创建一次新的 Compliation
 
-# 常见的 loader 有哪些？
+## 常见的 loader 有哪些？
 
 `image-loader`：加载并且压缩图片文件。
 
@@ -82,7 +84,7 @@ webpack 在开发模式下运行的时候，没当检测一个文件变化，就
 
 `url-loader`：与 `file-loader` 类似，区别是用户可以设置一个阈值，大于阈值会交给 `file-loader` 处理，小于阈值时返回文件 base64 形式编码 (处理图片和字体)
 
-# 常见的 plugin 有哪些？
+## 常见的 plugin 有哪些？
 
 `HtmlWebpackPlugin`：简化 HTML 文件创建 (依赖于 html-loader)
 
@@ -90,11 +92,11 @@ webpack 在开发模式下运行的时候，没当检测一个文件变化，就
 
 `clean-webpack-plugin`: 目录清理
 
-# webpack 的热更新原理是？
+## webpack 的热更新原理是？
 
 `模块热替换(HMR - hot module replacement)`，又叫做`热更新`，在不需要刷新整个页面的同时更新模块，能够提升开发的效率和体验。热更新时只会局部刷新页面上发生了变化的模块，同时可以保留当前页面的状态，比如复选框的选中状态等。
 
-# 如何提高 webpack 的构建速度？
+## 如何提高 webpack 的构建速度？
 
 1. 代码压缩。 JS 压缩、CSS 压缩、HTML 压缩
 
