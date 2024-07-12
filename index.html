@@ -11,35 +11,22 @@
     <meta name="description" content="Description" />
     <meta
       name="viewport"
-      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
-    />
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
     <link rel="icon" href="./style/logo.png" type="image/x-icon" />
-    <link
-      rel="stylesheet"
-      href="//cdn.jsdelivr.net/npm/docsify/themes/vue.css"
-    />
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/themes/vue.css" />
     <link rel="stylesheet" type="text/css" href="style/myStyle.css" />
-    <link
-      href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
     <!-- alert -->
     <link
       rel="stylesheet"
       href="//cdn.bootcss.com/sweetalert/1.1.3/sweetalert.min.css"
       type="text/css"
-      media="all"
-    />
+      media="all" />
   </head>
 
   <body
     background=""
-    style="
-      background-repeat: no-repeat;
-      background-size: 100% 100%;
-      background-attachment: fixed;
-    "
-  >
+    style="background-repeat: no-repeat; background-size: 100% 100%; background-attachment: fixed">
     <div id="app">Loading...</div>
     <a class="to-top">Top</a>
     <span class="material-icons"> search </span>
@@ -91,7 +78,7 @@
         'flexible-alerts': {
           style: 'flat',
         },
-      }
+      };
     </script>
 
     <script src="//cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js"></script>
@@ -129,28 +116,25 @@
     <script src="https://cdn.bootcss.com/sweetalert/1.1.3/sweetalert.min.js"></script>
     <script>
       document.body.oncopy = function () {
-        swal('复制成功 🎉', '😊😊😊', 'success')
-      }
+        swal('复制成功 🎉', '😊😊😊', 'success');
+      };
     </script>
 
     <!-- PWA 离线化 -->
     <script>
       if (typeof navigator.serviceWorker !== 'undefined') {
-        navigator.serviceWorker.register('sw.js')
+        navigator.serviceWorker.register('sw.js');
       }
     </script>
 
     <!-- 访问量统计 -->
-    <script
-      async
-      src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"
-    ></script>
+    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
     <!-- 置顶插件 -->
     <script src="style/jquery-1.11.3.min.js"></script>
     <script src="style/jquery.toTop.min.js"></script>
     <script>
-      $('.to-top').toTop()
+      $('.to-top').toTop();
     </script>
 
     <!-- Markdown 引用样式美化 -->
@@ -158,5 +142,15 @@
 
     <!-- 图片缩放 -->
     <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/zoom-image.js"></script>
+
+    <!-- Color4Bg.js 插件 -->
+    <script src="Color4Bg.js"></script>
+    <script>
+      let colorbg = new Color4Bg.Bg({
+        dom: 'box',
+        colors: ['#9CA6D9', '#8793CC', '#7C8AC5', '#7280BF'],
+        loop: true,
+      });
+    </script>
   </body>
 </html>
